@@ -3,6 +3,7 @@
 - Author: Michaela Guo Ying Lo (2024, One Earth) 
 - Queries: m.lo@kent.ac.uk OR michaelalo39@gmail.com
 - All code was tested using R version 4.4.1 (September, 2024)
+- Code and Data availability can be found using the following link: 10.5281/zenodo.13884414 
 
 ## R scripts 
  This project provides the prepared data and code for the analysis and output. The R project contains three R script files which should be run as ordered:
