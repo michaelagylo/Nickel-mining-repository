@@ -1,4 +1,4 @@
-# Paper:   Impacts of nickel mining on forests and well-being in Indonesia 
+# Paper:   Nickel mining reduced forest cover in Indonesia, but had mixed outcomes for well-being  
 
 - Author: Michaela Guo Ying Lo (2024, One Earth) 
 - Queries: m.lo@kent.ac.uk OR michaelalo39@gmail.com
