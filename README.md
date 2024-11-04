@@ -8,8 +8,8 @@
 ## R scripts 
  This project provides the prepared data and code for the analysis and output. The R project contains three R script files which should be run as ordered:
 - 1_gm_matching.R :  runs genetic (statistical) matching process and matches non-mining villages with mining villages (nickel and other mines)
-                    Note!! takes two days with Intel i7-10700, RAM 64GB, option to run pre-generated data in "prepared_data" folder, see below 
-                    Outputs will be stored in gm_output, including the covariate balance results and matched samples 
+   - + Note!! takes two days with Intel i7-10700, RAM 64GB, option to run pre-generated data in "prepared_data" folder, see        below
+   - + Outputs will be stored in gm_output, including the covariate balance results and matched samples 
 
 - 2_matched_outcome_combine.R :  combines the matched data with the outcome variables
 
