@@ -1,15 +1,15 @@
-# Paper:   Impacts of nickel mining on forests and well-being in Indonesia 
+# Paper:   Nickel mining reduced forest cover in Indonesia, but had mixed outcomes for well-being  
 
 - Author: Michaela Guo Ying Lo (2024, One Earth) 
 - Queries: m.lo@kent.ac.uk OR michaelalo39@gmail.com
 - All code was tested using R version 4.4.1 (September, 2024)
-- Code and Data availability can be found using the following link: 10.5281/zenodo.13884414 
+- Code and Data availability can be found using the following link: 10.5281/zenodo.13884414 OR github.com/michaelagylo/Nickel-mining-repository
 
 ## R scripts 
  This project provides the prepared data and code for the analysis and output. The R project contains three R script files which should be run as ordered:
 - 1_gm_matching.R :  runs genetic (statistical) matching process and matches non-mining villages with mining villages (nickel and other mines)
-                    Note!! takes two days with Intel i7-10700, RAM 64GB, option to run pre-generated data in "prepared_data" folder, see below 
-                    Outputs will be stored in gm_output, including the covariate balance results and matched samples 
+   - + Note!! takes two days with Intel i7-10700, RAM 64GB, option to run pre-generated data in "prepared_data" folder, see        below
+   - + Outputs will be stored in gm_output, including the covariate balance results and matched samples 
 
 - 2_matched_outcome_combine.R :  combines the matched data with the outcome variables
 
