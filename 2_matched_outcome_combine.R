@@ -1,12 +1,13 @@
 #                 #2. Combine matched samples with outcome data
 # Introduction:
 # This R script combines the matched samples with the outcome variables
-# There are two sources of matched samples that could be used: 
+# There are two sources of matched samples that could be used:
 # 1. prepared data: already available data to save computer processing time
-# 2. gm_output/matched data:  these data are results from after running 
+# 2. gm_output/matched data:  these data are results from after running
 #                             the gm_matching script.
-#  Sources can be chosen by changing the "input_path" 
+#  Sources can be chosen by changing the "input_path"
 # All data will be processed and saved in the "final_output/final_data/" folder
+
 
 
 # Prepare workspace ----
@@ -17,17 +18,17 @@ rm(list=ls())
 library("dplyr")
 
 # If not using the RStudio project, set working directory to the repository
-# directory. 
+# directory.
 # setwd("../")
 
-# Get the outcome variable data  
+# Get the outcome variable data
 y_path <- c("prepared_data/")
 NiYdata <- readRDS(paste0(y_path, "Nidata_outcome.RDS"))
-NiYdata <- NiYdata %>% 
+NiYdata <- NiYdata %>%
    mutate_at(.,vars(kab_code, prov_code),as.factor)
 
 OtYdata <- readRDS(paste0(y_path, "OTdata_outcome.RDS"))
-OtYdata <- OtYdata %>% 
+OtYdata <- OtYdata %>%
    mutate_at(.,vars(kab_code, prov_code),as.factor)
 
 #Process function ----
@@ -41,7 +42,7 @@ process_rds <- function(file_name,
    data <- readRDS(file_path)
    var.factor <- c("MPIBASE_CLS2", "LTYPE.11", "prov_code", "kab_code",
                    "id", "subclass")
-   data <- data %>% 
+   data <- data %>%
       mutate_at(.,vars(paste0(var.factor)),as.factor)
    data <- data %>% left_join(join_data, by = join_cols)
    saveRDS(data, paste0(output_path, file_name))
@@ -59,7 +60,7 @@ output_path <- c("final_output/final_data/")
 join_cols <- c("UniqueID", "kab_code", "prov_code")
 
 # List of files to process
-# matched data for nickel mines 
+# matched data for nickel mines
 nickel_file_names <- c("Nickel_whole.RDS",
                        "Nickel_short1.RDS",
                        "Nickel_short2.RDS",
